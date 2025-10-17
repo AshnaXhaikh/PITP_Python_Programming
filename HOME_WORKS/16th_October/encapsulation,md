@@ -1,0 +1,64 @@
+# Encapsulation in Python
+
+**Encapsulation** is an OOP concept that **restricts direct access to some attributes and methods** of a class. It helps **protect data** and ensures that objects are used safely.
+
+---
+
+## 1. What is Encapsulation?
+
+* Encapsulation hides the internal state of an object from the outside world.
+* Access to the data is only allowed through **methods** (getters and setters).
+
+---
+
+## 2. Access Modifiers in Python
+
+| Modifier  | Description                            | Example       |
+| --------- | -------------------------------------- | ------------- |
+| Public    | Accessible from anywhere               | `self.name`   |
+| Protected | Accessible within class and subclasses | `self._name`  |
+| Private   | Accessible only within the class       | `self.__name` |
+
+---
+
+## 3. Example of Encapsulation
+
+```python
+class BankAccount:
+    def __init__(self, balance):
+        self.__balance = balance  # private attribute
+
+    # Getter method
+    def get_balance(self):
+        return self.__balance
+
+    # Setter method
+    def deposit(self, amount):
+        if amount > 0:
+            self.__balance += amount
+        else:
+            print("Invalid deposit amount")
+
+# Creating an object
+account = BankAccount(1000)
+
+# Accessing balance via getter
+print(account.get_balance())  # Output: 1000
+
+# Modifying balance via setter
+account.deposit(500)
+print(account.get_balance())  # Output: 1500
+
+# Direct access is restricted
+# print(account.__balance)  # This will give an error
+```
+
+---
+
+## 4. Key Points
+
+* Encapsulation **protects the internal state** of an object.
+* **Getter and setter methods** allow controlled access to private data.
+* It improves **code maintainability** and **security**.
+
+---
