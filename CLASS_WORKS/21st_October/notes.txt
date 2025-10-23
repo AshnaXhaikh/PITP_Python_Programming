@@ -1,0 +1,2 @@
+Using 'with' statement for file handling.
+It automatically manages file closing. 

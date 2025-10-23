@@ -1,0 +1,3 @@
+Python makes file handling simple.
+This is a classwork example.
+We are learning reading and writing files.

@@ -1,0 +1,3 @@
+Python is powerful.
+File handling is easy.
+Let's count lines and words!
